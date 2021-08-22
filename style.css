@@ -33,7 +33,7 @@ p {
 	font-size: 30px;
 	padding: 1rem;
 	width: 10rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1rem; 
 	margin-left: 40%;
 	text-decoration: none;
 	color: lightgoldenrodyellow;
@@ -46,15 +46,23 @@ p {
 	color: rgb(82, 78, 78);
 }
 
+li:hover {
+	background:lightgray;
+	color: rgb(82, 78, 78);
+}
+
 li {
 	display:flex;
 	background: cornsilk;
+	margin: auto;
 	padding: 0.5rem;
+	width: 28rem;
 	text-align:center;
 	justify-content: center;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	box-sizing: border-box;
+	border-radius: 40px;
 }
 
 #currentTime {
