@@ -6,12 +6,15 @@ This is a three question quiz over JavaScript. When you click on the start quiz 
 
 ## Usage
 
-
+This will be used to complete the assignment. 
 
 ## Link
 
 https://su5ies.github.io/codeQuiz/
 
-## Screenshot
+## credits
+
+Special thanks to google, the class examples and my classmates. 
+
 
 
