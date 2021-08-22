@@ -23,10 +23,10 @@ let score = 0;
 let questionIndex = 0;
 let timer = document.querySelector("#startTime");
 let questionsDiv = document.querySelector("#questionsDiv");
-var secondsLeft = 30;
-var holdInterval = 0;
-var penalty = 5;
-var listCreate = document.createElement("ul");
+let secondsLeft = 30;
+let holdInterval = 0;
+let penalty = 5;
+let listCreate = document.createElement("ul");
 
 // Starts timer, displays on the screen
 timer.addEventListener("click", function () {
@@ -51,14 +51,14 @@ function render(questionIndex) {
     questionsDiv.innerHTML = "";
     listCreate.innerHTML = "";
     // loops through array
-    for (var i = 0; i < questions.length; i++) {
-        var userQuestion = questions[questionIndex].title;
-        var userChoices = questions[questionIndex].choices;
+    for (let i = 0; i < questions.length; i++) {
+        userQuestion = questions[questionIndex].title;
+        userChoices = questions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
     }
-    // For question choices
+
     userChoices.forEach(function (newItem) {
-        var listItem = document.createElement("li");
+        listItem = document.createElement("li");
         listItem.textContent = newItem;
         questionsDiv.appendChild(listCreate);
         listCreate.appendChild(listItem);
@@ -67,11 +67,11 @@ function render(questionIndex) {
 }
 // Event to compare choices with answers
 function compare(event) {
-    var element = event.target;
+    element = event.target;
 
     if (element.matches("li")) {
 
-        var createDiv = document.createElement("div");
+        createDiv = document.createElement("div");
         createDiv.setAttribute("id", "createDiv");
 
         if (element.textContent == questions[questionIndex].answer) {
@@ -102,38 +102,36 @@ function allDone() {
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
-    // Heading:
-    var createH1 = document.createElement("h1");
+    // Heading for game over
+    createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "All Done!"
 
     questionsDiv.appendChild(createH1);
 
     // Paragraph
-    var createP = document.createElement("p");
+    createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
     questionsDiv.appendChild(createP);
 
     // Calculates time remaining and replaces it with score
     if (secondsLeft >= 0) {
-        var timeRemaining = secondsLeft;
-        var createP2 = document.createElement("p");
+        timeRemaining = secondsLeft;
         clearInterval(holdInterval);
         createP.textContent = "Your final score is: " + timeRemaining;
-
-        questionsDiv.appendChild(createP2);
+        questionsDiv.appendChild(createP);
     }
 
     // Label for input box
-    var createLabel = document.createElement("label");
+    createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
 
     questionsDiv.appendChild(createLabel);
 
     // input for initials
-    var createInput = document.createElement("input");
+    let createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
     createInput.textContent = "";
@@ -141,7 +139,7 @@ function allDone() {
     questionsDiv.appendChild(createInput);
 
     // submit button to add to high scores list
-    var createSubmit = document.createElement("button");
+    createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
     createSubmit.textContent = "Submit";
@@ -150,18 +148,18 @@ function allDone() {
 
     // Event listener to capture initials and local storage for initials and score
     createSubmit.addEventListener("click", function () {
-        var initials = createInput.value;
+        let initials = createInput.value;
 
         if (initials === "") {
            alert("Please enter your initials")
 
         } else {
-            var finalScore = {
+            finalScore = {
                 initials: initials,
                 score: timeRemaining
             }
             console.log(finalScore);
-            var allScores = localStorage.getItem("allScores");
+            allScores = localStorage.getItem("allScores");
         if (allScores === null) {
                 allScores = [];
         } else {
@@ -169,7 +167,7 @@ function allDone() {
             }
 
             allScores.push(finalScore);
-            var newScore = JSON.stringify(allScores);
+            newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
             // Travels to final page
             window.location.replace("./highscores.html");

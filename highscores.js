@@ -8,14 +8,14 @@ clear.addEventListener("click", function () {
     location.reload();
 });
 // Retreives local stroage 
-let allScores = localStorage.getItem("allScores");
+allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(allScores);
 
 if (allScores !== null) {
 
     for (let i = 0; i < allScores.length; i++) {
 
-        let createLi = document.createElement("li");
+        createLi = document.createElement("li");
         createLi.textContent = allScores[i].initials + " " + allScores[i].score;
         highScore.appendChild(createLi);
 

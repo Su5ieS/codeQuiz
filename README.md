@@ -12,9 +12,19 @@ This will be used to complete the assignment.
 
 https://su5ies.github.io/codeQuiz/
 
+## Screenshots
+
+
+![Start](./images/initial screen.JPG)
+![Hover](./images/button hover.JPG)
+![q_Ans](./images/Q_Ans screen.JPG)
+![alert](./images/alert for enter initials.JPG)
+![scores](./images/high scores page.JPG)
+
 ## credits
 
 Special thanks to google, the class examples and my classmates. 
+Quiz questions borrowed from https://www.w3schools.com/js/js_quiz.asp
 
 
 
