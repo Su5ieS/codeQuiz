@@ -14,12 +14,11 @@ https://su5ies.github.io/codeQuiz/
 
 ## Screenshots
 
+![image](https://user-images.githubusercontent.com/84972783/134041345-f657d8d2-8e72-46d2-946a-3e8cf1d635a5.png)
+![image](https://user-images.githubusercontent.com/84972783/134041396-54fa0be9-95c6-456a-bfbf-f18678de4ba3.png)
+![image](https://user-images.githubusercontent.com/84972783/134041458-697304cd-892a-44e8-a99a-a8c08b77f4f3.png)
+![image](https://user-images.githubusercontent.com/84972783/134041617-6dfaa32a-2218-427b-9908-f586bb45c90b.png)
 
-![Start](./images/initial screen.JPG)
-![Hover](./images/button hover.JPG)
-![q_Ans](./images/Q_Ans screen.JPG)
-![alert](./images/alert for enter initials.JPG)
-![scores](./images/high scores page.JPG)
 
 ## credits
 
